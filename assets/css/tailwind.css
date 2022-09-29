@@ -1,0 +1,23 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&display=swap';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Zacbel X";
+    src: local("Zacbel X"),
+    url(/assets/fonts/zacbelx-extrabold.ttf) format("truetype");
+}
+
+
+html {
+    word-wrap: break-word;
+    scroll-behavior: auto;
+}
+
+.section {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+}
