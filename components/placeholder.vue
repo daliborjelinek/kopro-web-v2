@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-1">
+  <section style="height: 100vh" class=" section section-1 ">
     <div class="mt-56">
     <picture
       :class="{ 'landing-logo': true, animate: animation }"
