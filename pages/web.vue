@@ -1,54 +1,50 @@
 <template>
   <div>
     <Navigation />
-    <home/>
-    <services/>
-    <section id="portfolio" class="section section-3">
-      <div class="content-wrapper">
-        <h2 class="headline">Projekty</h2>
-      </div>
-    </section>
+    <home />
+    <services />
     <section class="section section-4">
       <div class="content-wrapper">
         <div class="animation-section-wrapper">
-          <AnimationView/>
+          <!--          <AnimationView />-->
+          <LinesAnimation />
           <div>
             <p style="color:white; text-align: right; z-index: 1; font-weight: 600; font-size:64px; line-height: 78px;">
               Tvoříme umění
               <span style="color:#9747FF">bez hranic.</span>
             </p>
-
           </div>
         </div>
       </div>
     </section>
     <section id="tym" class="section section-5">
       <div style="position: absolute; width:100%;height: 100%" class="tym-bg-wrapper">
-        <div class="c-left-team-div"></div>
-        <div class="c-right-team-div"></div>
-
+        <div class="c-left-team-div" />
+        <div class="c-right-team-div" />
       </div>
       <!-- <img class="img c-left-team" src="@/assets/c-shape-gray.svg" /> -->
       <!-- <img class="img c-right-team" src="@/assets/c-shape-gray.svg" /> -->
       <div class="content-wrapper">
-        <h2 class="headline">Tým</h2>
+        <h2 class="headline">
+          Tým
+        </h2>
       </div>
-
     </section>
-    <section class="section section-6">
+    <section id="kontakt" class="section section-6">
       <div class="content-wrapper">
-        <h2 class="headline">Napište nám</h2>
-        <contact/>
+        <h2 class="headline">
+          Napište nám
+        </h2>
+        <!--        <contact />-->
       </div>
-
     </section>
-    <footer-view/>
+    <footer-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'IndexPage'
 }
 </script>
 
@@ -56,7 +52,6 @@ export default {
 @media screen and (max-width: 600px) {
   .nav { display: none !important}
 }
-
 
 .c-left-team-div {
   width:40%;
@@ -92,7 +87,6 @@ export default {
   top: 0;
   right: 0;
 }
-
 
 .section-3 {
   background: linear-gradient(180deg, #797979 7.29%, rgba(237, 207, 207, 0) 100%);
@@ -131,7 +125,6 @@ export default {
   height: calc(100vh - 100px);
 }
 
-
 .content-wrapper {
   width: 80%;
 
@@ -147,9 +140,7 @@ export default {
   font-size: 96px;
   color: white;
 
-
 }
-
 
 .spacer {
   height: 100%;

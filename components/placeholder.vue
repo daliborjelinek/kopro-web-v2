@@ -1,13 +1,15 @@
 <template>
   <section style="height: 100vh" class=" section section-1 ">
     <div class="mt-56">
-    <picture
-      :class="{ 'landing-logo': true, animate: animation }"
-      @mouseenter="runAnimation"
-    >
-      <img src="~/assets/logo.svg" />
-    </picture>
-     <p class="text-gray-400 text-4xl mt-20 text-center">comming soon</p>
+      <picture
+        :class="{ 'landing-logo': true, animate: animation }"
+        @mouseenter="runAnimation"
+      >
+        <img src="~/assets/logo.svg">
+      </picture>
+      <p class="text-gray-400 text-4xl mt-20 text-center">
+        comming soon
+      </p>
     </div>
   </section>
 </template>
@@ -18,8 +20,8 @@ import { ref } from 'vue'
 const delay = '2000'
 
 const animation = ref(false)
-function runAnimation() {
-  if (animation.value === true) return
+function runAnimation () {
+  if (animation.value === true) { return }
   animation.value = true
   setTimeout(() => (animation.value = false), delay)
 }
@@ -77,7 +79,6 @@ function runAnimation() {
   animation: noise-anim-2 2000ms linear;
   animation-fill-mode: forwards;
 }
-
 
 .section-1 {
   background-image: url('assets/bg-sec1.png');

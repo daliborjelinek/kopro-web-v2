@@ -3,24 +3,28 @@
     <article class="letter">
       <div class="side">
         <p>
-          <textarea placeholder="Text zprávy"></textarea>
+          <textarea placeholder="Text zprávy" />
         </p>
       </div>
       <div class="side">
         <p>
-          <input type="text" placeholder="Vaše jméno" />
+          <input type="text" placeholder="Vaše jméno">
         </p>
         <p>
-          <input type="email" placeholder="Váš email" />
+          <input type="email" placeholder="Váš email">
         </p>
         <p>
-          <button @click="send">Odeslat</button>
+          <button @click="send">
+            Odeslat
+          </button>
         </p>
       </div>
     </article>
-    <div class="envelope front"></div>
-    <div class="envelope back"></div>
-    <p class="result-message centered">Thank you for your message</p>
+    <div class="envelope front" />
+    <div class="envelope back" />
+    <p class="result-message centered">
+      Thank you for your message
+    </p>
   </div>
 </template>
 
@@ -28,7 +32,7 @@
 import { ref } from 'vue'
 const sent = ref(false)
 
-function send() {
+function send () {
   sent.value = true
 }
 </script>

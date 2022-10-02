@@ -4,9 +4,8 @@
       :class="{ 'landing-logo': true, animate: animation }"
       @mouseenter="runAnimation"
     >
-      <img src="~/assets/logo.svg" />
+      <img src="~/assets/logo.svg">
     </picture>
-
   </section>
 </template>
 
@@ -16,8 +15,8 @@ import { ref } from 'vue'
 const delay = '2000'
 
 const animation = ref(false)
-function runAnimation() {
-  if (animation.value === true) return
+function runAnimation () {
+  if (animation.value === true) { return }
   animation.value = true
   setTimeout(() => (animation.value = false), delay)
 }
@@ -75,7 +74,6 @@ function runAnimation() {
   animation: noise-anim-2 2000ms linear;
   animation-fill-mode: forwards;
 }
-
 
 .section-1 {
   background-image: url('/assets/bg-sec1.png');

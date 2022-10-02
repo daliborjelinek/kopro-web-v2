@@ -1,31 +1,48 @@
 <template>
-  <div class="animation-wrapper">
-    <img
+  <svg viewBox="-100 -5 870 680" fill="blue" xmlns="http://www.w3.org/2000/svg">
+    <rect x="-100" y="-5" width="100%" height="100%" fill="black" />
+    <image
       :style="getStyleObj.img1"
-      class="img img1"
-      src="~/assets/animations/first-lines.svg"
-    >
-    <img
+      x="0"
+      y="0"
+      width="590"
+      height="407"
+      href="~/assets/animations/first-lines.svg"
+    />
+    <image
       :style="getStyleObj.img2"
-      class="img img2"
-      src="~/assets/animations/second-lines.svg"
-    >
-    <img
+      x="0"
+      y="0"
+      width="798"
+      height="476"
+      href="~/assets/animations/second-lines.svg"
+    />
+    <image
       :style="getStyleObj.img3"
-      class="img img3"
-      src="~/assets/animations/third-lines.svg"
-    >
-    <img
+      x="0"
+      y="0"
+      width="590"
+      height="636"
+      href="~/assets/animations/third-lines.svg"
+    />
+    <image
       :style="getStyleObj.c1"
-      class="img c-left"
-      src="~/assets/animations/c-shape.svg"
-    >
-    <img
+      x="0"
+      y="0"
+      width="98"
+      height="101"
+      href="~/assets/animations/c-shape.svg"
+    />
+    <image
       :style="getStyleObj.c2"
-      class="img c-right"
-      src="~/assets/animations/c-shape.svg"
-    >
-  </div>
+      x="0"
+      y="0"
+      width="98"
+      height="101"
+      href="~/assets/animations/c-shape.svg"
+    />
+
+  </svg>
 </template>
 
 <script>
@@ -54,15 +71,15 @@ export default {
             opacity: 0
           },
           c1: {
-            x: 0,
-            y: 0,
-            ang: 50,
+            x: 68,
+            y: -21,
+            ang: 61,
             opacity: 1
           },
           c2: {
-            x: 473,
-            y: 267,
-            ang: 249,
+            x: 516,
+            y: 382,
+            ang: 239,
             opacity: 1
           }
         },
@@ -93,8 +110,8 @@ export default {
             opacity: 1
           },
           c2: {
-            x: 671,
-            y: 255,
+            x: 713,
+            y: 375,
             ang: 226,
             opacity: 1
           }
@@ -120,20 +137,20 @@ export default {
             opacity: 1
           },
           c1: {
-            x: -21,
-            y: 216,
+            x: -18,
+            y: 243,
             ang: 54,
             opacity: 1
           },
           c2: {
-            x: 492,
-            y: 450,
+            x: 455,
+            y: 611,
             ang: 244,
             opacity: 1
           }
         }
       ],
-      index: 0
+      index: 2
     }
   },
   computed: {
@@ -171,13 +188,7 @@ export default {
 </script>
 
 <style>
-.img {
-  position: absolute;
+image {
   transition: 0.5s;
-}
-
-.animation-wrapper {
-  width: 500px;
-  height: 500px;
 }
 </style>

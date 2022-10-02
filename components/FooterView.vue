@@ -2,7 +2,7 @@
   <footer>
     <div class="content-wrapper">
       <div class="footer">
-        <img src="assets/logo-full.svg" />
+        <img src="assets/logo-full.svg">
       </div>
     </div>
   </footer>

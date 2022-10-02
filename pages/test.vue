@@ -1,3 +1,3 @@
 <template>
-  <placeholder />
+  <hamburger-menu />
 </template>
