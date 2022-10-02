@@ -17,7 +17,7 @@
               <div :ref="el => descriptionRefs[service.name] = el">
                 <p v-html="service.description" />
                 <div class="rounded-full text-white px-4 py-1 my-2 inline-block font-bold" :style="{'background-color': service.color }">
-                  Přejít na portfolio {{ service.name }} <ChevronRight />
+                  Přejít na portfolio {{ service.name }}<!-- <ChevronRight />-->
                 </div>
               </div>
             </div>
@@ -39,7 +39,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import ChevronRight from 'vue-material-design-icons/ChevronRight'
+//import ChevronRight from 'vue-material-design-icons/ChevronRight'
 const activeService = ref(null)
 const lastActiveImage = ref(null)
 const descriptionRefs = ref({})

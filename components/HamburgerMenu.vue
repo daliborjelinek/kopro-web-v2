@@ -15,7 +15,7 @@
         Item 2
       </li>
       <li class="dropdown_item-3 overflow-hidden">
-        <span @click="openPortfolio = !openPortfolio">Item 3<chevron-down class="chev transition duration-500 ease-in-out" :class="[{'skew-x-40':openPortfolio}]" /></span>
+        <span @click="openPortfolio = !openPortfolio">Item 3<!--<ChevronDown class="chev transition duration-500 ease-in-out" :class="[{'skew-x-40':openPortfolio}]" />--></span>
         <ul class="hamburger-menu ml-5" :class="[{'hamburger-menu--active':openPortfolio}]">
           <li>Fotky</li>
           <li>Videa</li>
@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import ChevronDown from 'vue-material-design-icons/ChevronDown'
+//import ChevronDown from 'vue-material-design-icons/ChevronDown'
 const open = ref(false)
 const openPortfolio = ref(false)
 
