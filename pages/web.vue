@@ -1,12 +1,10 @@
 <template>
   <div>
-    <Navigation />
-    <home />
-    <services />
+    <SectionsHome />
+    <SectionsServices />
     <section class="section section-4">
       <div class="content-wrapper">
         <div class="animation-section-wrapper">
-          <!--          <AnimationView />-->
           <LinesAnimation />
           <div>
             <p style="color:white; text-align: right; z-index: 1; font-weight: 600; font-size:64px; line-height: 78px;">
@@ -38,14 +36,20 @@
         <!--        <contact />-->
       </div>
     </section>
-    <footer-view />
   </div>
 </template>
 
-<script>
-export default {
-  name: 'IndexPage'
-}
+<script setup>
+import { watch, nextTick } from 'vue'
+import { scrollToFc } from '../utils/smoothScroll'
+const route = useRoute()
+
+watch(route, async (value) => {
+  await nextTick(() => {
+    scrollToFc(value.hash)
+  })
+})
+
 </script>
 
 <style lang="scss">

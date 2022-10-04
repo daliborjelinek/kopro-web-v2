@@ -1,5 +1,5 @@
 <template>
-  <svg viewBox="-100 -5 870 680" fill="blue" xmlns="http://www.w3.org/2000/svg">
+  <svg width="100%" viewBox="-100 -5 870 680" fill="blue" xmlns="http://www.w3.org/2000/svg">
     <rect x="-100" y="-5" width="100%" height="100%" fill="black" />
     <image
       :style="getStyleObj.img1"
