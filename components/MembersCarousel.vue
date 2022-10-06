@@ -1,6 +1,6 @@
 <template>
   <div class="w-full bg-white">
-    <Carousel :items-to-show="2"  wrap-around>
+    <Carousel :items-to-show="2" wrap-around>
       <template #addons>
         <Pagination />
         <Navigation />
