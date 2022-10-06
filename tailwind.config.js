@@ -4,10 +4,19 @@ module.exports = {
     './layouts/**/*.vue',
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        primary: '#9747FF',
+        secondary: '#00FF57',
+        spring: '#00FF99',
+        turquoise: '#02FAF2'
+      },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif']
+      }
+    }
   },
   plugins: []
 }

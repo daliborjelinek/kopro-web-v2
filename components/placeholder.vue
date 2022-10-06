@@ -8,7 +8,7 @@
         <img src="~/assets/logo.svg">
       </picture>
       <p class="text-gray-400 text-4xl mt-20 text-center">
-        comming soon
+        coming soon
       </p>
     </div>
   </section>

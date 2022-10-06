@@ -19,6 +19,12 @@ body {
     overflow-x: hidden;
 }
 
+h2 {
+    font-family: "Zacbel X";
+    font-size: 96px;
+    color: white;
+}
+
 .section {
     width: 100%;
     min-height: calc(100vh - 100px);

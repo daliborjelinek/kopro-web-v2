@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-full bg-white pt-[100px]">
-    <Carousel :items-to-show="1.5" wrap-around>
+  <div class="w-full bg-white">
+    <Carousel :items-to-show="2"  wrap-around>
       <template #addons>
         <Pagination />
         <Navigation />
@@ -9,8 +9,8 @@
         <div class="carousel__item">
           <div class="flex flex-col w-60 member-wrapper">
             <div class="relative h-[248px]">
-              <img :src="`../../assets/faces/${member.tag}.png`" class="w-72 absolute top-0">
-              <img :src="`../../assets/faces/${member.tag}_wild.png`" class="w-60 transition duration-300 absolute top-0 opacity-0 hover:opacity-100">
+              <img :src="`/public/faces/${member.tag}.png`" class="absolute top-0">
+              <img :src="`/public/faces/${member.tag}_wild.png`" class=" transition duration-300 absolute top-0 opacity-0 hover:opacity-100">
             </div>
             <div>
               <div class="h-52 bg-primary p-2 member-description-wrapper">
@@ -63,28 +63,34 @@ const props = defineProps({
 
 .carousel__slide .member-wrapper {
   opacity: 1;
- //transform: rotateY(-20deg) scale(0.9);
+  transform:  scale(1);
 }
 
 .carousel__slide--active ~ .carousel__slide .member-wrapper {
-  transform: rotateY(20deg) scale(0.9);
+ //transform: scale(0.8);
 }
 
 .carousel__slide--prev .member-wrapper {
   opacity: 0.3;
- transform: rotateY(-10deg) scale(0.95);
+  transform: scale(0.6);
   z-index: 0;
+  pointer-events: none;
 }
 
 .carousel__slide--next .member-wrapper {
   opacity: 0.3;
-  transform: rotateY(10deg) scale(0.95);
+  transform: scale(0.8);
   z-index: 0;
+  pointer-events: none;
 }
 
 .carousel__slide--active {
   z-index: 10;
   opacity: 1;
-  transform: rotateY(0) scale(1.1);
+  transform: scale(1);
+}
+
+.carousel__prev, .carousel__next {
+  top:25%
 }
 </style>

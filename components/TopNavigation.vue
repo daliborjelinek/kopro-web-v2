@@ -120,4 +120,12 @@ header {
 
 }
 
+.spacer {
+  display: inline-block;
+  height: 18px;
+  width: 2px;
+  background-color: #FFFFFF;
+  margin: 0 30px;
+}
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navigation v-if="route.path!== '/' " />
+    <TopNavigation v-if="route.path!== '/' " />
     <router-view v-slot="{ Component }">
       <transition mode="out-in" name="slide-fade" @after-enter="scroll()">
         <component :is="Component" />

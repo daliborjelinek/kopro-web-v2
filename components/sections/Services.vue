@@ -1,5 +1,5 @@
 <template>
-  <section id="sluzby" class="section section-2">
+  <section id="sluzby" class="flex justify-center">
     <div class="content-wrapper">
       <h2 class="headline">
         Služby
