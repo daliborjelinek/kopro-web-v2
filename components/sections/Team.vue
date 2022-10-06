@@ -99,10 +99,11 @@ const members = [
   height: 480px;
 }
 
-.member-wrapper:hover .member-description-wrapper {
+.member-wrapper:hover .member-description-wrapper, .member-open {
   height: 215px;
   background-color: black;
 }
+
 
 .c-left-team-div {
   width:40vw;

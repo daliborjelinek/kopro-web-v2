@@ -9,11 +9,11 @@
         <div class="carousel__item">
           <div class="flex flex-col w-60 member-wrapper">
             <div class="relative h-[248px]">
-              <img :src="`/public/faces/${member.tag}.png`" class="absolute top-0">
-              <img :src="`/public/faces/${member.tag}_wild.png`" class=" transition duration-300 absolute top-0 opacity-0 hover:opacity-100">
+              <img :src="`/faces/${member.tag}.png`" class="absolute top-0">
+              <img :src="`/faces/${member.tag}_wild.png`" class=" transition duration-300 absolute top-0 opacity-0 hover:opacity-100">
             </div>
             <div>
-              <div class="h-52 bg-primary p-2 member-description-wrapper">
+              <div class="h-52 bg-primary p-2 member-description-wrapper member-open">
                 <p class="text-white font-bold text-lg">
                   {{ member.name }}
                 </p>
