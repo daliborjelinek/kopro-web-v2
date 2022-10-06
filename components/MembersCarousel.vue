@@ -10,7 +10,7 @@
           <div class="flex flex-col w-60 member-wrapper">
             <div class="relative h-[248px]">
               <img :src="`/faces/${member.tag}.png`" class="absolute top-0">
-              <img :src="`/faces/${member.tag}_wild.png`" class=" transition duration-300 absolute top-0 opacity-0 hover:opacity-100">
+              <img :src="`/faces/${member.tag}_wild.png`" class="wild-image transition duration-300 absolute top-0 opacity-0">
             </div>
             <div>
               <div class="h-52 bg-primary p-2 member-description-wrapper member-open">
@@ -57,8 +57,8 @@ const props = defineProps({
   transform-style: preserve-3d;
 }
 
-.carousel__slide--sliding {
-  transition: 0.5s;
+.member-wrapper {
+  transition: 0.3s;
 }
 
 .carousel__slide .member-wrapper {
@@ -66,28 +66,26 @@ const props = defineProps({
   transform:  scale(1);
 }
 
-.carousel__slide--active ~ .carousel__slide .member-wrapper {
- //transform: scale(0.8);
-}
-
-.carousel__slide--prev .member-wrapper {
+.carousel__slide .member-wrapper {
   opacity: 0.3;
   transform: scale(0.6);
   z-index: 0;
   pointer-events: none;
 }
 
-.carousel__slide--next .member-wrapper {
-  opacity: 0.3;
-  transform: scale(0.8);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.carousel__slide--active {
+.carousel__slide--active .member-wrapper {
   z-index: 10;
   opacity: 1;
   transform: scale(1);
+}
+
+.carousel__slide .wild-image {
+  transition: 2s;
+  transition-delay: 2s;
+}
+
+.carousel__slide--active .wild-image {
+  opacity: 1;
 }
 
 .carousel__prev, .carousel__next {
