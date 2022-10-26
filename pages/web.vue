@@ -10,7 +10,7 @@
       <div class="content-wrapper">
 <!--        <contact/>-->
         <h2 class="headline">
-          Napište nám
+          Kontakt
         </h2>
         <!--        <contact />-->
       </div>

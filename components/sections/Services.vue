@@ -6,20 +6,22 @@
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class=" flex-col services">
-          <div v-for="service of services" :key="service.name" :class="['service', activeService?.name === service.name ? 'active' : '']">
+          <div v-for="service of services" :key="service.title" :class="['service', activeService?.title === service.title ? 'active' : '']">
             <h3
               class="cursor-pointer text-ellipsis overflow-hidden whitespace-nowrap"
               @click="setActive(service)"
             >
               {{ service.title }}
             </h3>
-            <div :style="getHeight(service.name)" class="service-description">
-              <div :ref="el => descriptionRefs[service.name] = el">
+            <div :style="getHeight(service.title)" class="service-description">
+              <div :ref="el => descriptionRefs[service.title] = el">
                 <p v-html="service.description" />
-                <div class="rounded-full text-white px-4 py-1 my-2 inline-block font-bold" :style="{'background-color': service.color }">
-                  Přejít na portfolio {{ service.name }}
-                  <IcoMdi:chevronRight />
-                </div>
+                <nuxt-link v-if="service.color" :to="'portfolio/'+slugify(service.title)">
+                  <div class="rounded-full text-white px-4 py-1 my-2 inline-block font-bold" :style="{'background-color': service.color }">
+                    Přejít na portfolio
+                    <IcoMdi:chevronRight />
+                  </div>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -41,13 +43,14 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import slugify from 'slugify'
 import { services } from '../../assets/data/services'
 const activeService = ref(null)
 const lastActiveImage = ref(services[0].image)
 const descriptionRefs = ref({})
 
 const setActive = (service) => {
-  if (activeService.value?.name === service.name) {
+  if (activeService.value?.title === service.title) {
     activeService.value = null
   } else {
     activeService.value = service
@@ -56,7 +59,7 @@ const setActive = (service) => {
 }
 
 const getHeight = (name) => {
-  return activeService.value?.name === name ? `height: ${descriptionRefs?.value[name]?.clientHeight}px` : 'height: 0'
+  return activeService.value?.title === name ? `height: ${descriptionRefs?.value[name]?.clientHeight}px` : 'height: 0'
 }
 
 const bgImage = computed(() => {

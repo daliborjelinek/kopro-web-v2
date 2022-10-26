@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="nav-wrapper">
-      <logo-glitch />
+      <nuxt-link to="/web"><logo-glitch /></nuxt-link>
 
       <div class="items-center hidden lg:flex">
         <div v-for="(item, index) in menu" class="inline-block relative">
@@ -31,9 +31,10 @@
 
 <script setup>
 import { ref } from 'vue'
+import slugify from 'slugify'
 import { portfolio } from '../assets/data/portfolio'
 
-const portfolioItems = [...new Set(portfolio.map(obj => obj.type))]
+const portfolioItems = [...new Set(portfolio.map(obj => obj.type))].map(item => ({ title: item, link: `/portfolio/${slugify(item)}` }))
 
 console.log(portfolioItems)
 const menu = ref([
@@ -47,17 +48,8 @@ const menu = ref([
     title: 'Portfolio',
     link: '',
     submenu: {
-      items: [
-        {
-          name: 'photo',
-          title: 'Fotografie',
-          link: '/portfolio/foto'
-        },
-        {
-          name: 'video',
-          title: 'Video',
-          link: '/portfolio/video'
-        }],
+      items:
+        portfolioItems,
       isOpen: false
     }
   },
