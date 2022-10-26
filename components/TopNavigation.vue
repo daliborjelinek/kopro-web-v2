@@ -31,7 +31,11 @@
 
 <script setup>
 import { ref } from 'vue'
+import { portfolio } from '../assets/data/portfolio'
 
+const portfolioItems = [...new Set(portfolio.map(obj => obj.type))]
+
+console.log(portfolioItems)
 const menu = ref([
   {
     name: 'Services.vue',
@@ -43,16 +47,17 @@ const menu = ref([
     title: 'Portfolio',
     link: '',
     submenu: {
-      items: [{
-        name: 'video',
-        title: 'Video',
-        link: '/portfolio/video'
-      },
-      {
-        name: 'photo',
-        title: 'Fotografie',
-        link: '/portfolio/Photo'
-      }],
+      items: [
+        {
+          name: 'photo',
+          title: 'Fotografie',
+          link: '/portfolio/foto'
+        },
+        {
+          name: 'video',
+          title: 'Video',
+          link: '/portfolio/video'
+        }],
       isOpen: false
     }
   },
@@ -78,7 +83,7 @@ header {
   position: fixed;
   display: flex;
   justify-content: center;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .nav-item {

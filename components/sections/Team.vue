@@ -10,7 +10,7 @@
         O nás
       </h2>
       <p class="lg:w-1/2 w-full">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer vulputate sem a nibh rutrum consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus.
+        {{ description }}
       </p>
       <div class="w-full flex justify-center hidden my-5 sm:block">
         <div class="flex justify-between flex-wrap gap-3.5 max-w-[850px] m-auto">
@@ -46,45 +46,7 @@
 <script setup>
 import MembersCarousel from '../MembersCarousel'
 
-const members = [
-  {
-    name: 'Ondřej Kocar',
-    role: 'Filmmaker, Fotograf, Pilot',
-    description: 'Díky divadlu, možnosti být v několika filmových štábech a díky mnoha dalším externím spolupracím, jako je například zajištění a správa mezinárodních vysílání, vyučování audiovizuální tvorby na Masarykově univerzitě, natáčení portrétních videí. Výtvory!.',
-    tag: 'Ondra'
-  },
-  {
-    name: 'Dalibor Jelínek',
-    role: 'Filmmaker, Fotograf, Zvukař',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer vulputate sem a nibh rutrum consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus.',
-    tag: 'Dali'
-  },
-  {
-    name: 'Denisa Klimešová',
-    role: 'Fotografka',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer vulputate sem a nibh rutrum consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus.',
-    tag: 'Denca'
-  },
-  {
-    name: 'Anna Zahálková',
-    role: 'PR, Sociální sítě',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer vulputate sem a nibh rutrum consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus.',
-    tag: 'Anicka'
-  },
-  {
-    name: 'Matyáš Vrba',
-    role: 'Streamer',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer vulputate sem a nibh rutrum consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus.',
-    tag: 'Maty'
-  },
-  {
-    name: 'Šárka Portešová',
-    role: 'Grafický design',
-    description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer vulputate sem a nibh rutrum consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris metus.',
-    tag: 'Sarka'
-  }
-
-]
+import { members, description } from '../../assets/data/team'
 </script>
 
 <style lang="scss">
@@ -103,7 +65,6 @@ const members = [
   height: 215px;
   background-color: black;
 }
-
 
 .c-left-team-div {
   width:40vw;

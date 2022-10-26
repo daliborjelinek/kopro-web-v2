@@ -47,18 +47,27 @@ const props = defineProps({
 <style lang="scss">
 .carousel__slide {
   padding: 5px;
+  z-index: -1;
 }
 
-.carousel__viewport {
-  perspective: 2000px;
+.carousel__slide.carousel__slide--prev .member-wrapper {
+
+  transform: rotateY(-54deg) scale(0.6);;
 }
 
+.carousel__slide.carousel__slide--next .member-wrapper {
+  transform: rotateY(54deg) scale(0.6);;
+}
 .carousel__track {
   transform-style: preserve-3d;
 }
 
 .member-wrapper {
   transition: 0.3s;
+}
+
+.carousel__slide--active {
+  z-index: 10;
 }
 
 .carousel__slide .member-wrapper {
@@ -69,19 +78,18 @@ const props = defineProps({
 .carousel__slide .member-wrapper {
   opacity: 0.3;
   transform: scale(0.6);
-  z-index: 0;
+
   pointer-events: none;
 }
 
 .carousel__slide--active .member-wrapper {
-  z-index: 10;
   opacity: 1;
   transform: scale(1);
 }
 
 .carousel__slide .wild-image {
-  transition: 2s;
-  transition-delay: 2s;
+  transition: 1s;
+  transition-delay: 1s;
 }
 
 .carousel__slide--active .wild-image {
@@ -89,6 +97,6 @@ const props = defineProps({
 }
 
 .carousel__prev, .carousel__next {
-  top:25%
+  height: 100%;
 }
 </style>

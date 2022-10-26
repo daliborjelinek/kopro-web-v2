@@ -2,9 +2,11 @@
   <div>
     <TopNavigation v-if="route.path!== '/' " />
     <router-view v-slot="{ Component }">
-      <transition mode="out-in" name="slide-fade" @after-enter="scroll()">
-        <component :is="Component" />
-      </transition>
+      <div class="pt-[100px]">
+        <transition mode="out-in" name="slide-fade" @after-enter="scroll()">
+          <component :is="Component" />
+        </transition>
+      </div>
     </router-view>
 
     <footer-view v-if="route.path!== '/' " />

@@ -19,7 +19,8 @@ export default defineNuxtConfig({
     // 'nuxt-storm',
   ],
   css: [
-    '~/assets/css/tailwind.css'
+    '~/assets/css/tailwind.css',
+    '~/assets/css/default.css'
   ],
   modules: [
     'unplugin-icons/nuxt'

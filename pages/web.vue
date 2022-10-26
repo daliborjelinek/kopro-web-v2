@@ -2,12 +2,13 @@
   <div>
     <SectionsHome />
     <SectionsServices />
-    <SectionsCreateArt/>
+    <SectionsCreateArt />
     <section id="tym" class="section bg-white relative">
       <SectionsTeam />
     </section>
     <section id="kontakt" class="section section-6">
       <div class="content-wrapper">
+<!--        <contact/>-->
         <h2 class="headline">
           Napište nám
         </h2>
@@ -18,14 +19,12 @@
 </template>
 
 <script setup>
-import { watch, nextTick } from 'vue'
 import { scrollToFc } from '../utils/smoothScroll'
-const route = useRoute()
 
-watch(route, async (value) => {
-  await nextTick(() => {
-    scrollToFc(value.hash)
-  })
+const router = useRouter()
+router.afterEach((to, from) => {
+  console.log(to, from)
+  if (from.name === to.name) { scrollToFc(to.hash) }
 })
 
 </script>

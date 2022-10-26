@@ -1,11 +1,10 @@
-export const scrollToFc = (hash) => {
+export const scrollToFc = (hash, doc = null) => {
   function easeInOutCubic (t) {
     return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
   }
-
-  const scrollTo = document.getElementById(hash.substring(1))
+  const definedDocument = doc || document
+  const scrollTo = definedDocument.getElementById(hash.substring(1))
   if (!scrollTo) {
-    console.log('scroll to neexistuje', scrollTo, hash.substring(1))
     return
   }
   // Using the history api to solve issue: back doesn't work
@@ -14,7 +13,7 @@ export const scrollToFc = (hash) => {
   if (window.history.pushState && location.hash !== hash) { window.history.pushState('', '', hash) }
 
   // Get duration from element, default to 500ms
-  const duration = 1000
+  const duration = 500
 
   // Get offset from element, default to 0
   const offset = -100

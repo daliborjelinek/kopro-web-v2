@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
+    "dev": "TAILWIND_MODE=watch nuxi dev",
     "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
@@ -29,8 +29,12 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.3",
+    "@yeger/vue-masonry-wall": "^3.2.10",
+    "limax": "^3.0.0",
     "v-click-outside": "^3.2.0",
     "v-smooth-scroll": "^2.0.0-beta.2",
-    "vue3-carousel": "^0.2.0"
+    "vue-easy-lightbox": "^1.9.0",
+    "vue3-carousel": "^0.2.0",
+    "vue3-picture-swipe": "^3.0.6"
   }
 }
