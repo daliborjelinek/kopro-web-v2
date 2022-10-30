@@ -1,11 +1,23 @@
 <template>
   <section class="section section-1">
-    <picture
-      :class="{ 'landing-logo': true, animate: animation }"
-      @mouseenter="runAnimation"
+    <video-background
+      src="/bg.mp4"
+      :sources="[
+        {src: '/bg.mp4', res: 5000, autoplay: true},
+      ]"
+      style="height: 100%; width: 100%"
+      overlay="linear-gradient(45deg,#2a4ae430,#fb949e6b)"
     >
-      <img src="~/assets/logo.svg">
-    </picture>
+      <div class="absolute h-full w-full flex items-center justify-center">
+        <picture
+          class="relative"
+          :class="{ 'landing-logo': true, animate: animation }"
+          @mouseenter="runAnimation"
+        >
+          <img src="~/assets/logo.svg">
+        </picture>
+      </div>
+    </video-background>
   </section>
 </template>
 
@@ -47,11 +59,6 @@ function runAnimation () {
   }
 }
 
-.landing-logo {
-  margin: 300px 0;
-  position: relative;
-}
-
 .landing-logo.animate::before {
   content: url('/assets/logo.svg');
   //filter: drop-shadow( 3px 3px 0px #fd5901b1);
@@ -77,7 +84,10 @@ function runAnimation () {
 
 .section-1 {
   background-image: url('/assets/bg-sec1.png');
+  background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
 }
 </style>

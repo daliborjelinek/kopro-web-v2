@@ -14,6 +14,7 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router'
 import { scrollToFc } from './utils/smoothScroll'
 const route = useRoute()
 const scroll = () => {

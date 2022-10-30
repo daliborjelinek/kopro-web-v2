@@ -5,6 +5,16 @@ import Icons from 'unplugin-icons/vite'
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   ssr: true,
+  app: {
+    head: {
+      charset: 'utf-16',
+      title: 'Ko.Pro',
+      meta: [
+        { name: 'description', content: 'Kocar production official website' }
+      ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    }
+  },
   build: {
     postcss: {
       postcssOptions: {

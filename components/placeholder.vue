@@ -52,11 +52,6 @@ function runAnimation () {
   }
 }
 
-.landing-logo {
-  margin: 300px 0px;
-  position: relative;
-}
-
 .landing-logo.animate::before {
   content: url('assets/logo.svg');
   //filter: drop-shadow( 3px 3px 0px #fd5901b1);

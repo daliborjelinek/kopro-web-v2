@@ -8,11 +8,7 @@
     </section>
     <section id="kontakt" class="section section-6">
       <div class="content-wrapper">
-<!--        <contact/>-->
-        <h2 class="headline">
-          Kontakt
-        </h2>
-        <!--        <contact />-->
+        <SectionsContact />
       </div>
     </section>
   </div>
@@ -23,8 +19,10 @@ import { scrollToFc } from '../utils/smoothScroll'
 
 const router = useRouter()
 router.afterEach((to, from) => {
-  console.log(to, from)
   if (from.name === to.name) { scrollToFc(to.hash) }
+  if (!to.hash) {
+    window.scrollTo(0, 0)
+  }
 })
 
 </script>
@@ -43,7 +41,7 @@ router.afterEach((to, from) => {
 .section-6 {
   padding-top: 50px;
   background: linear-gradient(141.35deg, #FAFAFA -4.79%, rgba(0, 0, 0, 0.619792) -4.78%, rgba(0, 0, 0, 0.634054) 4.76%, #000000 71.66%, #000000 109.9%);
-  height: calc(100vh - 100px);
+  min-height: initial;
 }
 
 .content-wrapper {

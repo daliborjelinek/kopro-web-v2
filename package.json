@@ -28,13 +28,13 @@
     "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
-    "@formkit/auto-animate": "^1.0.0-beta.3",
+    "@emailjs/browser": "^3.7.0",
     "@yeger/vue-masonry-wall": "^3.2.10",
     "slugify": "^1.6.5",
     "v-click-outside": "^3.2.0",
-    "v-smooth-scroll": "^2.0.0-beta.2",
     "vue-easy-lightbox": "^1.9.0",
-    "vue3-carousel": "^0.2.0",
-    "vue3-picture-swipe": "^3.0.6"
+    "vue-final-modal": "^3.4.4",
+    "vue-responsive-video-background-player": "^2.3.1",
+    "vue3-carousel": "^0.2.0"
   }
 }

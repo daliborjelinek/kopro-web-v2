@@ -5,14 +5,15 @@
         {{ project.title }}
       </h2>
       <p class="text-primary ">
-        {{ project.subtitle }}
+        {{ project.category }}
       </p>
       <p><span class="font-bold">Datum:</span> {{ project.date }}</p>
       <p><span class="font-bold">Klinet:</span> {{ project.client }}</p>
       <p><span class="font-bold">Autor:</span> {{ project.author }}</p>
       <div class="grid grid-cols-3 gap-3">
         <div class="col-span-3 md:col-span-2">
-          <img class=" w-full" :src="project.coverImage">
+          <iframe v-if="project.coverVideo" width="100%" :style="'aspect-ratio:' + project.videoAspectRatio" :src="'https://www.youtube.com/embed/'+project.coverVideo" allow="fullscreen;" />
+          <img v-else class=" w-full" :src="project.coverImage">
         </div>
         <div class="col-span-3 md:col-span-1">
           <h3 class="text-xl">
@@ -40,7 +41,7 @@
         :gap="5"
       >
         <template #default="{ item, index }">
-          <img style="width: 100%" :src="item" @click="open(index)">
+          <img class="cursor-pointer" style="width: 100%" :src="item" @click="open(index)">
         </template>
       </masonry-wall>
     </div>
@@ -59,18 +60,16 @@ const route = useRoute()
 const project = ref(null)
 watch(route, (to) => {
   project.value = portfolio.find(item => slugify(item.title) === to.params.slug)
-  console.log(project, route.params.slug)
 }, { immediate: true })
 
 const imgsRef = ref(project.value?.images)
 const onHide = () => {
-  visible.value = false; console.log('hide')
+  visible.value = false
 }
 const index = ref(0)
 const visible = ref(false)
 
 const open = (imgIndex) => {
-  console.log(imgIndex)
   index.value = imgIndex
   visible.value = true
 }

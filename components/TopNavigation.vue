@@ -36,7 +36,6 @@ import { portfolio } from '../assets/data/portfolio'
 
 const portfolioItems = [...new Set(portfolio.map(obj => obj.type))].map(item => ({ title: item, link: `/portfolio/${slugify(item)}` }))
 
-console.log(portfolioItems)
 const menu = ref([
   {
     name: 'Services.vue',
