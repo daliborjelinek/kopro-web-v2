@@ -14,8 +14,8 @@
           v-model="data.email"
           required
           type="email"
-          :class="{'border-red-800  focus:border-red-600': formDirty && !validator.email}"
-          class="border border-gray-600 text-sm focus:border-primary outline-0 block w-full pl-10 p-2.5 text-white bg-gray-700 "
+          :class="[formDirty && !validator.email ? 'border-red-800  focus:border-red-600' : 'border-gray-600  focus:border-primary']"
+          class=" text-sm border outline-0 block w-full pl-10 p-2.5 text-white bg-gray-700"
           placeholder="abychom věděli kam odpovědět..."
         >
       </div>
@@ -29,8 +29,8 @@
           v-model="data.name"
           required
           type="text"
-          :class="{'border-red-800  focus:border-red-600': formDirty && !validator.name}"
-          class="border border-gray-600 text-sm focus:border-primary outline-0 block w-full pl-10 p-2.5 text-white bg-gray-700 "
+          :class="[formDirty && !validator.name ? 'border-red-800  focus:border-red-600' : 'border-gray-600  focus:border-primary']"
+          class=" text-sm border outline-0 block w-full pl-10 p-2.5 text-white bg-gray-700 "
           placeholder="abychom věděli jak vás oslovit..."
         >
       </div>
@@ -43,8 +43,8 @@
           id="text"
           v-model="data.text"
           type="text"
-          :class="{'border-red-800  focus:border-red-600': formDirty && !validator.text}"
-          class="border border-gray-600 text-sm focus:border-primary outline-0 block w-full pl-10 p-2.5 text-white bg-gray-700 min-h-[100px]"
+          :class="[formDirty && !validator.text ? 'border-red-800  focus:border-red-600' : 'border-gray-600  focus:border-primary']"
+          class=" text-sm border outline-0 block w-full pl-10 p-2.5 text-white bg-gray-700 min-h-[100px]"
           placeholder="text zprávy"
         />
       </div>
@@ -53,7 +53,13 @@
       </button>
     </form>
   </div>
-  <vue-final-modal
+
+  <modal :show="showModal" @close="showModal = false">
+    <template #header>
+      <h3>custom header</h3>
+    </template>
+  </modal>
+<!-- <vue-final-modal
     v-slot="{ params, close }"
     v-model="showModal"
     classes="flex justify-center items-center"
@@ -67,7 +73,7 @@
         Zavřít
       </button>
     </div>
-  </vue-final-modal>
+  </vue-final-modal>-->
 </template>
 
 <script setup>
@@ -76,7 +82,6 @@ import { computed, reactive } from 'vue'
 
 const data = reactive({ name: '', email: '', text: '' })
 const formDirty = ref(false)
-
 const showModal = ref(false)
 
 const validator = computed(() => {
