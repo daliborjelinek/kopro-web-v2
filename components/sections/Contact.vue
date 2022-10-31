@@ -4,7 +4,7 @@
   </h2>
   <div class="md:w-1/2">
     <form>
-      <label for="mail" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Váš email</label>
+      <label for="mail" class="block mb-2 text-sm font-medium text-gray-300">Váš email</label>
       <div class="relative mb-6">
         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
           <IcoMdi:at class="text-gray-400" />
@@ -19,7 +19,7 @@
           placeholder="abychom věděli kam odpovědět..."
         >
       </div>
-      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Váše jméno</label>
+      <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Váše jméno</label>
       <div class="relative mb-6">
         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
           <IcoMdi:account class="text-gray-400" />
@@ -34,7 +34,7 @@
           placeholder="abychom věděli jak vás oslovit..."
         >
       </div>
-      <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Text zprávy</label>
+      <label for="text" class="block mb-2 text-sm font-medium text-gray-300">Text zprávy</label>
       <div class="relative mb-6">
         <div class="absolute pt-2 inset-y-0 left-0  pl-3 pointer-events-none">
           <IcoMdi:text class="text-gray-400" />

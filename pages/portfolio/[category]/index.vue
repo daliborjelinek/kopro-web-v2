@@ -35,15 +35,14 @@ import slugify from 'slugify'
 import { portfolio } from '../../../assets/data/portfolio'
 
 const route = useRoute()
-
+const selectedCategory = ref(null)
 const items = ref(portfolio.filter(item => slugify(item.type) === route.params.category))
 watch(route, (to) => {
   items.value = portfolio.filter(item => slugify(item.type) === to.params.category)
+  selectedCategory.value = null
 }, { immediate: true })
 
-const categories = [...new Set(items.value.map(obj => obj.category))]
-
-const selectedCategory = ref(null)
+const categories = computed(() => [...new Set(items.value.map(obj => obj.category))])
 
 const filteredItems = computed(() => {
   if (selectedCategory.value) {
