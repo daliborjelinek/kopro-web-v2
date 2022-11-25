@@ -101,6 +101,22 @@ export const portfolio: Project[] = [
     '/images/PortfolioKone/Kone3.jpg', '/images/PortfolioKone/Kone4.jpg', '/images/PortfolioKone/Kone5.jpg']
   },
   {
+    type: 'Fotografie',
+    category: 'svatba',
+    date: '2022-14-08',
+    title: 'Svatební focení',
+    client: 'Terka a Jan Stanovští',
+    author: 'Ondřej Kocar',
+    description: 'Už na předsvatební schůzce bylo jasné, že tahle svatba bude zážitek, ale kombinaci tak příjemné, láskyplné, současně však vtipné atmosféry jsem opravdu nečekal. Terka a Jan byli od začátku velmi milí a příjemní, takže v kombinaci s jejich fotogeničností se prostě fotilo samo. Velmi si vážím toho, že Denča v roli svědkyně oslovila na focení svatby právě mě, protože oba víme, jak je náročné vybírat fotografa, když je člověk sám fotografem. Svatebčanům děkuji za příjemný den a přeji manželství minimálně tak hezké, jako byla svatba. A ta sakra byla.',
+    coverImage: '/images/Svatba1/TerkaJan (27).jpg',
+    images: ['/images/Svatba1/TerkaJan (1).jpg', '/images/Svatba1/TerkaJan (2).jpg', '/images/Svatba1/TerkaJan (3).jpg', '/images/Svatba1/TerkaJan (4).jpg', '/images/Svatba1/TerkaJan (5).jpg',
+    '/images/Svatba1/TerkaJan (6).jpg', '/images/Svatba1/TerkaJan (7).jpg', '/images/Svatba1/TerkaJan (8).jpg', '/images/Svatba1/TerkaJan (9).jpg', '/images/Svatba1/TerkaJan (10).jpg',
+    '/images/Svatba1/TerkaJan (11).jpg','/images/Svatba1/TerkaJan (12).jpg', '/images/Svatba1/TerkaJan (13).jpg', '/images/Svatba1/TerkaJan (14).jpg', '/images/Svatba1/TerkaJan (15).jpg',
+    '/images/Svatba1/TerkaJan (16).jpg', '/images/Svatba1/TerkaJan (17).jpg', '/images/Svatba1/TerkaJan (18).jpg', '/images/Svatba1/TerkaJan (19).jpg', '/images/Svatba1/TerkaJan (20).jpg',
+    '/images/Svatba1/TerkaJan (21).jpg', '/images/Svatba1/TerkaJan (22).jpg', '/images/Svatba1/TerkaJan (23).jpg', '/images/Svatba1/TerkaJan (24).jpg', '/images/Svatba1/TerkaJan (25).jpg',
+    '/images/Svatba1/TerkaJan (26).jpg', '/images/Svatba1/TerkaJan (28).jpg', '/images/Svatba1/TerkaJan (29).jpg', '/images/Svatba1/TerkaJan (30).jpg',]
+  },
+  {
     type: 'Cokoliv jiného',
     category: 'Dokument',
     date: '2022-12-10',
