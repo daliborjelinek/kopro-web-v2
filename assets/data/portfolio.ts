@@ -89,6 +89,18 @@ export const portfolio: Project[] = [
       'https://picsum.photos/300/200?random=13', 'https://picsum.photos/300/200?random=14']
   },
   {
+    type: 'Fotografie',
+    category: 'Focení koní',
+    date: '2022-25-11',
+    title: 'Focení koní na Vysočině',
+    client: 'Resort Svatá Kateřina',
+    author: 'Ondřej Kocar',
+    description: 'Resort Svatá Kateřina na Vysočině je nejen krásnou oázou klidu, ale také domovem pro několik nádherných koní. Tvory jako jsou tito nejde nefotit.',
+    coverImage: '/images/PortfolioKone/Kone1',
+    images: ['/images/PortfolioKone/Kone2',
+    '/images/PortfolioKone/Kone3', '/images/PortfolioKone/Kone4', '/images/PortfolioKone/Kone5']
+  },
+  {
     type: 'Cokoliv jiného',
     category: 'Dokument',
     date: '2022-12-10',
