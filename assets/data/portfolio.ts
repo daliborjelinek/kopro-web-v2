@@ -19,7 +19,7 @@ export const portfolio: Project[] = [
     category: 'Dokument',
     date: '2022-12-10',
     title: 'Maroko',
-    client: 'Livingstone',
+    client: 'Kocarstone',
     author: 'Ondřej Kocar',
     description: 'Lorem ipsum dolor sit amet, quam. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
     coverImage: 'https://picsum.photos/300/200?random=1',
