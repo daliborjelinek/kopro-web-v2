@@ -96,9 +96,9 @@ export const portfolio: Project[] = [
     client: 'Resort Svatá Kateřina',
     author: 'Ondřej Kocar',
     description: 'Resort Svatá Kateřina na Vysočině je nejen krásnou oázou klidu, ale také domovem pro několik nádherných koní. Tvory jako jsou tito nejde nefotit.',
-    coverImage: '/images/PortfolioKone/Kone1',
-    images: ['/images/PortfolioKone/Kone2',
-    '/images/PortfolioKone/Kone3', '/images/PortfolioKone/Kone4', '/images/PortfolioKone/Kone5']
+    coverImage: '/images/PortfolioKone/Kone1.jpg',
+    images: ['/images/PortfolioKone/Kone2.jpg',
+    '/images/PortfolioKone/Kone3.jpg', '/images/PortfolioKone/Kone4.jpg', '/images/PortfolioKone/Kone5.jpg']
   },
   {
     type: 'Cokoliv jiného',
