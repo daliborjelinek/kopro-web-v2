@@ -14,8 +14,7 @@ export const members = [
   {
     name: 'Denisa Klimešová',
     role: 'Fotografka',
-    description: 'Jmenuji se Denča a jsem fotící maniak, co nejradši zachycuje přirozenost, radost, emoce, lásku a krásu takovou, jaká ve skutečnosti je. Jsem ta, co má stále úsměv od ucha k uchu a nechybí jí smysl pro humor. Vystudovala jsem střední uměleckou školu se zaměřením na fotografii, a tak se fotografování věnuji již od svých patnácti let. Zkušenosti mám především se svatebním, rodinným či reportážním focením. Ráda hledám detail v objektivu i v osobách před ním. Zkrátka potřebuji cítit spojení, aby mé fotografie vyprávěly příběh, ve kterém se sejdou vize klienta s těmi mými.
-    ',
+    description: 'Jmenuji se Denča a jsem fotící maniak, co nejradši zachycuje přirozenost, radost, emoce, lásku a krásu takovou, jaká ve skutečnosti je. Jsem ta, co má stále úsměv od ucha k uchu a nechybí jí smysl pro humor. Vystudovala jsem střední uměleckou školu se zaměřením na fotografii, a tak se fotografování věnuji již od svých patnácti let. Zkušenosti mám především se svatebním, rodinným či reportážním focením. Ráda hledám detail v objektivu i v osobách před ním. Zkrátka potřebuji cítit spojení, aby mé fotografie vyprávěly příběh, ve kterém se sejdou vize klienta s těmi mými.',
     tag: 'Denca'
   },
   {
@@ -33,8 +32,7 @@ export const members = [
   {
     name: 'Šárka Portešová',
     role: 'Grafická designerka',
-    description: 'Jmenuju se Šárka a v KoPro mám na starost grafický desig, kterému jsem se začala věnovat již na gymnáziu. Podílela jsem se zde na různorodých projektech počínaje tvorbou plakátů pro různé biologické olympiády až po návrh vizuálního stylu na školní ples. Nyní studuji na fakultě informatiky MU vizuální informatiku, která zahrnuje právě i grafický design, na jehož výuce jsem měla příležitost se i podílet. V rámci designu mě baví proces, kdy ze zadání klienta vytvořím návrh, který zákazníka zkrátka nadchne. Když jsem dostala nabídku, abych se připojila ke KoPro, neváhala jsem. Mám radost, že díky designu, můžu dělat radost.
-    ',
+    description: 'Jmenuju se Šárka a v KoPro mám na starost grafický desig, kterému jsem se začala věnovat již na gymnáziu. Podílela jsem se zde na různorodých projektech počínaje tvorbou plakátů pro různé biologické olympiády až po návrh vizuálního stylu na školní ples. Nyní studuji na fakultě informatiky MU vizuální informatiku, která zahrnuje právě i grafický design, na jehož výuce jsem měla příležitost se i podílet. V rámci designu mě baví proces, kdy ze zadání klienta vytvořím návrh, který zákazníka zkrátka nadchne. Když jsem dostala nabídku, abych se připojila ke KoPro, neváhala jsem. Mám radost, že díky designu, můžu dělat radost.',
     tag: 'Sarka'
   }
 
